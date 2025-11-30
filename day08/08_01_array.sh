@@ -40,3 +40,19 @@ echo "配列の長さを取得"
 echo ${#months[@]}
 echo "1番目の要素の長さを取得"
 echo ${#months[1]}
+
+# 配列をつなげる
+declare -a array1=("A" "B" "C")
+declare -a array2=("D" "E" "F")
+
+echo "配列をつなげる"
+array3=("${array1[@]}" "${array2[@]}")
+echo ${array3[@]}
+
+# 特定の部分だけ取り出す
+echo "特定の部分だけ取り出す"
+echo ${array3[@]:2:5}
+
+# 配列の要素の特定の部分だけ取り出す
+echo "配列の要素の特定の部分だけ取り出す"
+echo ${months[1]:2:5}
