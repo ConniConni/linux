@@ -39,3 +39,18 @@ for odd_num in  $( seq 11 -2 0)
 do
         echo "${odd_num}"
 done
+
+# 連想配列のキーをforループで取り出す
+echo "連想配列のキーをforループで取り出す"
+
+declare -A salaries
+salaries["Taro"]=1000000
+salaries["jiro"]=500000
+salaries["sayo"]=250000
+
+for i in "${!salaries[@]}"
+do
+	echo "${i}: ${salaies[${i}]}"
+done
+
+
